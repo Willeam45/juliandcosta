@@ -50,30 +50,58 @@ flex-wrap:wrap;
 }
 
 .photo-wrapper{
+position:relative;
 text-align:center;
 }
 
-.ring{
+/* Glow + rings */
+
+.glow-ring{
 background:radial-gradient(circle,#4aa3ff,#0f172a);
-padding:14px;
+padding:16px;
 border-radius:50%;
-box-shadow:0 0 80px rgba(74,163,255,.6);
+box-shadow:0 0 90px rgba(74,163,255,.7);
 }
 
-.ring img{
-width:240px;
-border-radius:50%;
-border:6px solid white;
-}
-
-.status{
-margin-top:12px;
+.photo-circle{
 background:white;
-padding:8px 16px;
-border-radius:20px;
-box-shadow:0 4px 12px rgba(0,0,0,.1);
-font-size:14px;
+padding:6px;
+border-radius:50%;
 }
+
+.photo-circle img{
+width:240px;
+height:240px;
+object-fit:cover;
+border-radius:50%;
+display:block;
+}
+
+/* Badge attached */
+
+.status-badge{
+position:absolute;
+bottom:-10px;
+left:50%;
+transform:translateX(-50%);
+background:white;
+padding:8px 18px;
+border-radius:20px;
+font-size:14px;
+box-shadow:0 4px 12px rgba(0,0,0,.12);
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.dot{
+width:10px;
+height:10px;
+background:#38bdf8;
+border-radius:50%;
+}
+
+/* TEXT */
 
 .hero-text{
 max-width:520px;
@@ -257,6 +285,4 @@ text-align:center;
 display:none;
 }
 .hero-text h1{
-font-size:32px;
-}
-}
+font-size:32
